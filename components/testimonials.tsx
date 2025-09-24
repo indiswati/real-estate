@@ -57,7 +57,7 @@ export function Testimonials() {
   ];
 
   return (
-    <section 
+    <section id="testimonials"
       className="bg-gradient-to-br from-gray-100 to-blue-100 py-20 px-6" 
       ref={sectionRef}
       style={{ opacity: isSectionVisible ? 1 : 0 }}

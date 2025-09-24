@@ -7,6 +7,7 @@ import { WhyChooseUs } from "@/components/why-choose-us"
 import { Footer } from "@/components/footer"
 import { ContactForm } from "@/components/contact-form"
 import { About } from "@/components/about"
+import { FAQ } from "@/components/faq"
 
 export default function HomePage() {
   return (
@@ -26,6 +27,7 @@ export default function HomePage() {
       <LatestInsights />
       </div>
       <WhyChooseUs />
+      <FAQ />
       <div id="contact">
       <ContactForm />
       </div>
