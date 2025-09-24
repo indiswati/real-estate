@@ -38,6 +38,7 @@ export function About() {
   const [titleRef, isTitleVisible] = useIntersectionObserver({ threshold: 0.5 });
   const [contentRef, isContentVisible] = useIntersectionObserver({ threshold: 0.2 });
   const [imageRef, isImageVisible] = useIntersectionObserver({ threshold: 0.2 });
+  const [featuresRef, isFeaturesVisible] = useIntersectionObserver({ threshold: 0.3 });
   const [statsRef, isStatsVisible] = useIntersectionObserver({ threshold: 0.3 });
 
   const stats = [
@@ -92,7 +93,7 @@ export function About() {
   return (
     <section 
       id="about" 
-      className="bg-gradient-to-br from-gray-50 to-blue-50 py-20 px-6"
+      className="bg-gradient-to-br from-gray-50 to-blue-50 py-2 px-6"
       ref={sectionRef}
       style={{ opacity: isSectionVisible ? 1 : 0 }}
     >
@@ -115,7 +116,7 @@ export function About() {
               transition: 'all 0.8s ease-out'
             }}
           >
-            About RealEstatePro
+            About Open Projects 
           </h2>
           <p 
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
@@ -131,10 +132,11 @@ export function About() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 mb-20">
           {/* Left Column - Content */}
           <div 
             ref={contentRef}
+            className="flex flex-col justify-start"
             style={{ 
               opacity: isContentVisible ? 1 : 0, 
               transform: isContentVisible ? 'none' : 'translateX(-50px)',
@@ -171,39 +173,12 @@ export function About() {
                 We pride ourselves on transparency, professionalism, and delivering measurable results. Our track record speaks for itself - over 500 successful property transactions and a client satisfaction rate of 98%.
               </p>
             </div>
-
-            {/* Features */}
-            <div className="mt-8 space-y-4">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-start space-x-4 p-4 bg-white/80 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer"
-                  style={{ 
-                    opacity: isContentVisible ? 1 : 0, 
-                    transform: isContentVisible ? 'none' : 'translateX(-30px)',
-                    transition: 'all 0.8s ease-out',
-                    transitionDelay: `${400 + (index * 150)}ms`
-                  }}
-                >
-                  <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-1 group-hover:text-blue-700 transition-colors duration-300">
-                      {feature.title}
-                    </h4>
-                    <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* Right Column - Image */}
+          {/* Right Column - Image (aligned to start) */}
           <div 
             ref={imageRef}
+            className="flex flex-col justify-start"
             style={{ 
               opacity: isImageVisible ? 1 : 0, 
               transform: isImageVisible ? 'none' : 'translateX(50px)',
@@ -239,6 +214,44 @@ export function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Features Section - Horizontal Layout */}
+        <div 
+          ref={featuresRef}
+          className="mb-20"
+          style={{ 
+            opacity: isFeaturesVisible ? 1 : 0, 
+            transform: isFeaturesVisible ? 'none' : 'translateY(40px)',
+            transition: 'all 0.8s ease-out'
+          }}
+        >
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center p-6 bg-white/80 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer"
+                style={{ 
+                  opacity: isFeaturesVisible ? 1 : 0, 
+                  transform: isFeaturesVisible ? 'none' : 'translateY(30px)',
+                  transition: 'all 0.8s ease-out',
+                  transitionDelay: `${200 + (index * 150)}ms`
+                }}
+              >
+                <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300 mb-4">
+                  {feature.icon}
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2 group-hover:text-blue-700 transition-colors duration-300">
+                    {feature.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 // Add this scroll function
 const scrollToElement = (elementId: string) => {
   const element = document.getElementById(elementId)
@@ -14,7 +15,7 @@ const scrollToElement = (elementId: string) => {
 }
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+const router = useRouter()
   return (
     <header className="bg-white/90 backdrop-blur-md shadow-lg sticky top-0 z-50" style={{ transform: "none" }}>
       <div className="max-w-[1365px] mx-auto flex justify-between items-center p-4 relative">
@@ -35,7 +36,7 @@ export function Header() {
         <nav className="space-x-6 hidden md:flex items-center">
           <button
             className="hover:text-blue-600 transition-colors duration-300 cursor-pointer"
-            style={{ transform: "none" }} onClick={() => scrollToElement('home')}
+            style={{ transform: "none" }} onClick={() => router.push("/")}
           >
             Home
           </button>
@@ -67,7 +68,7 @@ export function Header() {
             </button>
 
             <div className="absolute hidden group-hover:block pt-2 bg-white shadow-xl rounded-xl w-56 border border-gray-100 opacity-100 transform translate-y-0 transition-all duration-300 ease-in-out z-50">
-              <button className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 rounded-t-xl group w-full text-left" onClick={() => scrollToElement('lead-services')}>
+              <button className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 rounded-t-xl group w-full text-left" onClick={() => router.push("/leads")}>
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
@@ -84,7 +85,7 @@ export function Header() {
                   Buyer Leads
                 </span>
               </button>
-              <button className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 group w-full text-left" onClick={() => scrollToElement('lead-services')}>
+              <button className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 group w-full text-left" onClick={() => router.push("/leads")}>
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
@@ -101,7 +102,7 @@ export function Header() {
                   Seller Leads
                 </span>
               </button>
-              <button className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 group w-full text-left">
+              <button className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 group w-full text-left" onClick={() => router.push("/leads")}>
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
@@ -118,7 +119,7 @@ export function Header() {
                   Broker Leads
                 </span>
               </button>
-              <button className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 rounded-b-xl group w-full text-left">
+              <button className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 rounded-b-xl group w-full text-left" onClick={() => router.push("/leads")}>
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
@@ -140,7 +141,7 @@ export function Header() {
 
           <button
             className="hover:text-blue-600 transition-colors duration-300 cursor-pointer"
-            style={{ transform: "none" }}
+            style={{ transform: "none" }} onClick={() => router.push("/service")}
           >
             Properties
           </button>
@@ -159,7 +160,7 @@ export function Header() {
 
           <button
             className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300"
-            tabIndex={0}
+            
             style={{
               boxShadow:
                 "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
