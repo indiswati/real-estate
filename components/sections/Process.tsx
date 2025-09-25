@@ -1,6 +1,6 @@
-// components/sections/Process.jsx
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 function useIntersectionObserver(options = {}) {
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -35,40 +35,153 @@ function useIntersectionObserver(options = {}) {
 export default function Process() {
   const [sectionRef, isSectionVisible] = useIntersectionObserver({ threshold: 0.2 });
   const [titleRef, isTitleVisible] = useIntersectionObserver({ threshold: 0.5 });
+  const pathname = usePathname();
 
-  const steps = [
-    {
-      number: "1",
-      title: "Define",
-      description: "We understand your ideal customer profile and business objectives in detail.",
-      icon: "🎯"
-    },
-    {
-      number: "2", 
-      title: "Research",
-      description: "Our team researches and filters targeted prospects using advanced tools.",
-      icon: "🔍"
-    },
-    {
-      number: "3",
-      title: "Verify", 
-      description: "Human verification ensures quality and accuracy of every lead.",
-      icon: "✅"
-    },
-    {
-      number: "4",
-      title: "Deliver",
-      description: "We deliver exclusive leads and book qualified appointments for you.",
-      icon: "🚀"
+  // Get process data based on URL
+  const getProcessData = () => {
+    if (pathname.includes('seller')) {
+      return {
+        title: "Our Proven Process",
+        subtitle: "From lead identification to listing conversion - our systematic approach delivers results",
+        steps: [
+          {
+            number: "1",
+            title: "Define",
+            description: "We identify your target seller profile and preferred locations for maximum impact.",
+            icon: "🎯"
+          },
+          {
+            number: "2", 
+            title: "Research",
+            description: "Advanced data mining and market analysis to identify motivated property owners.",
+            icon: "🔍"
+          },
+          {
+            number: "3",
+            title: "Verify", 
+            description: "Human verification of seller intent through calls, surveys, and behavioral tracking.",
+            icon: "✅"
+          },
+          {
+            number: "4",
+            title: "Deliver",
+            description: "Qualified seller leads delivered to your CRM with complete prospect profiles.",
+            icon: "🏠"
+          }
+        ]
+      };
     }
-  ];
+
+    if (pathname.includes('broker')) {
+      return {
+        title: "Our Proven Process",
+        subtitle: "Strategic broker identification and partnership development for your business growth",
+        steps: [
+          {
+            number: "1",
+            title: "Define",
+            description: "We identify your ideal broker profile and market focus for strategic partnerships.",
+            icon: "🎯"
+          },
+          {
+            number: "2", 
+            title: "Research",
+            description: "Our experts conduct in-depth research across databases and professional networks.",
+            icon: "🔍"
+          },
+          {
+            number: "3",
+            title: "Verify", 
+            description: "Each lead is manually verified to ensure accuracy, credentials, and reliability.",
+            icon: "✅"
+          },
+          {
+            number: "4",
+            title: "Deliver",
+            description: "We deliver high-quality, ready-to-convert broker leads with complete profiles.",
+            icon: "🤝"
+          }
+        ]
+      };
+    }
+
+    if (pathname.includes('appointment')) {
+      return {
+        title: "Our Proven Process",
+        subtitle: "From prospect identification to confirmed meetings - streamlining your sales pipeline",
+        steps: [
+          {
+            number: "1",
+            title: "Define",
+            description: "We work with you to define your target audience and specific meeting goals.",
+            icon: "🎯"
+          },
+          {
+            number: "2", 
+            title: "Research",
+            description: "Our experts identify and qualify potential buyers, sellers, and broker prospects.",
+            icon: "🔍"
+          },
+          {
+            number: "3",
+            title: "Schedule", 
+            description: "We contact prospects and book meetings directly into your calendar system.",
+            icon: "📅"
+          },
+          {
+            number: "4",
+            title: "Confirm",
+            description: "All appointments are confirmed and reminders sent to reduce no-shows significantly.",
+            icon: "✅"
+          }
+        ]
+      };
+    }
+
+    // Default - General leads process
+    return {
+      title: "How It Works",
+      subtitle: "Our proven 4-step process delivers consistent results for your business",
+      steps: [
+        {
+          number: "1",
+          title: "Define",
+          description: "We understand your ideal customer profile and business objectives in detail.",
+          icon: "🎯"
+        },
+        {
+          number: "2", 
+          title: "Research",
+          description: "Our team researches and filters targeted prospects using advanced tools.",
+          icon: "🔍"
+        },
+        {
+          number: "3",
+          title: "Verify", 
+          description: "Human verification ensures quality and accuracy of every lead delivered.",
+          icon: "✅"
+        },
+        {
+          number: "4",
+          title: "Deliver",
+          description: "We deliver exclusive leads and book  appointments for your success.",
+          icon: "🚀"
+        }
+      ]
+    };
+  };
+
+  const currentData = getProcessData();
 
   return (
     <section 
       id="process" 
-      className="py-8 bg-gradient-to-br from-blue-50 to-indigo-50"
+      className="py-8"
+      style={{ 
+        background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
+        opacity: isSectionVisible ? 1 : 0 
+      }}
       ref={sectionRef}
-      style={{ opacity: isSectionVisible ? 1 : 0 }}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div 
@@ -80,20 +193,28 @@ export default function Process() {
             transition: 'all 0.8s ease-out'
           }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            How It Works
+          <h2 
+            className="text-4xl md:text-5xl font-bold mb-6"
+            style={{ color: '#062235' }}
+          >
+            {currentData.title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our proven 4-step process delivers consistent results for your business
+          <p 
+            className="text-xl max-w-3xl mx-auto leading-relaxed"
+            style={{ color: '#64748b' }}
+          >
+            {currentData.subtitle}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <div key={index} className="relative">
+          {currentData.steps.map((step, index) => (
+            <div key={`${pathname}-step-${index}`} className="relative">
               <div
-                className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border border-gray-100 hover:border-blue-200"
+                className="rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 border hover:border-blue-200"
                 style={{
+                  background: 'linear-gradient(180deg,#fff,#fbfdff)',
+                  border: '1px solid rgba(226, 232, 240, 0.5)',
                   opacity: isSectionVisible ? 1 : 0,
                   transform: isSectionVisible ? 'none' : 'translateY(40px)',
                   transition: 'all 0.8s ease-out',
@@ -101,19 +222,30 @@ export default function Process() {
                 }}
               >
                 <div className="text-4xl mb-4">{step.icon}</div>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4"
+                  style={{
+                    background: 'linear-gradient(135deg, #3b82f6, #6366f1)'
+                  }}
+                >
                   {step.number}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 
+                  className="text-xl font-bold mb-3"
+                  style={{ color: '#062235' }}
+                >
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p 
+                  className="leading-relaxed"
+                  style={{ color: '#64748b' }}
+                >
                   {step.description}
                 </p>
               </div>
               
               {/* Arrow connector for desktop */}
-              {index < steps.length - 1 && (
+              {index < currentData.steps.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-blue-500 text-2xl z-10">
                   →
                 </div>
@@ -121,6 +253,8 @@ export default function Process() {
             </div>
           ))}
         </div>
+
+       
       </div>
     </section>
   );
