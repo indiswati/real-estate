@@ -22,7 +22,8 @@ export default function LeadsPage() {
       <LeadsProcess />
       <LeadsPackages />
       <Testimonials />
-      <LeadsContact />
+      {/* <LeadsContact /> */}
+      <ContactForm />
       <Footer />
             </div>
   );
