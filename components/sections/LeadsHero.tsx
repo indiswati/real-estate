@@ -192,14 +192,15 @@ export default function LeadsHero() {
                 borderRadius: '12px',
                 overflow: 'hidden',
                 height: '200px sm:240px lg:260px',
-                objectFit: 'cover'
+                objectFit: 'cover',
+                padding: '16px lg:18px',
               }}
               src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=1200&q=80&auto=format&fit=crop&crop=top"
               alt="Sales team discussing buyer leads"
             />
             
             {/* Responsive Card Footer */}
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-3 gap-3 sm:gap-0">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-3 gap-3 sm:gap-0 p-5">
               <div className="text-center sm:text-left">
                 <strong className="block text-sm lg:text-base">Start with a Pilot</strong>
                 <div className="text-xs lg:text-sm" style={{ color: '#64748b' }}>
