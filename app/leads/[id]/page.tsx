@@ -10,7 +10,7 @@ import { Testimonials } from '@/components/testimonials';
 import { ContactForm } from '@/components/contact-form';
 import LeadsContact from '@/components/sections/LeadsContact';
 
-export default function Leads() {
+export default function LeadsPage() {
   return (
             <div className="font-poppins bg-gradient-to-br from-gray-50 to-blue-50">
 

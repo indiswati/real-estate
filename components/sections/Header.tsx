@@ -7,7 +7,7 @@ export default function SectionHeader() {
     { name: 'How It Works', href: '#process' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#cta' }
+    { name: 'Contact', href: '#contact' }
   ];
 
   const scrollToSection = (href:any) => {

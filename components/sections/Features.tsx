@@ -53,7 +53,7 @@ export default function Features() {
   return (
     <section 
       ref={sectionRef}
-      className="max-w-[1150px] mb-10 mx-auto px-5 pt-1.5"
+      className="max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-[1150px] mx-auto px-4 sm:px-6 lg:px-8 mb-10 mx-auto px-5 pt-1.5"
     >
       <h2 
         className="text-2xl font-bold text-[#0f172a] mb-5"

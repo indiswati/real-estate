@@ -38,8 +38,13 @@ export default function Hero() {
   return (
     <section 
       ref={heroRef}
-      className="relative text-white pt-10 pb-12 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #001731 0%, #00426F 50%, #0D76B1 100%)" }}
+      className="relative pt-10 pb-12 flex items-center justify-center text-white overflow-hidden"
+      style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=80&auto=format&fit=crop')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>

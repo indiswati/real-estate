@@ -10,6 +10,7 @@ import { Header } from '@/components/header';
 import SectionHeader from '@/components/sections/Header';
 import CallToAction from '@/components/sections/CallToAction';
 import { Footer } from '@/components/footer';
+import { ContactForm } from '@/components/contact-form';
 
 // Custom hook for intersection observer
 function useIntersectionObserver(options = {}) {
@@ -52,7 +53,8 @@ export default function ServicesPage() {
             <Process />
             <FAQ />
             <Testimonials />
-            <CallToAction />
+            {/* <CallToAction /> */}
+            <ContactForm />
             <Footer />
             {/* <Contact /> */}
         </div>

@@ -331,7 +331,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
         <title>Lead Generation for Off-Plan & Open Projects Dubai</title>
         <meta name="description" content="Generate high-quality buyer & investor leads for Dubai off-plan properties and open projects. Boost sales with targeted campaigns and real-time tracking." />
         <meta name="keywords" content="open projects dubai, off plan properties dubai, buy off plan dubai, dubai off plan apartments, dubai off plan villas, new projects dubai, openprojects.ae, dubai real estate leads, property investment dubai, dubai off plan payment plans, ready to move projects dubai, dubai property developers, dubai real estate marketing, real estate lead generation dubai" />

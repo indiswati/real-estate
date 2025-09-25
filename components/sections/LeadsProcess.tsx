@@ -1,4 +1,3 @@
-// components/sections/BuyerLeadsProcess.jsx
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
@@ -62,10 +61,11 @@ export default function LeadsProcess() {
     <section 
       ref={sectionRef}
       id="process" 
-      className="max-w-[1150px] mx-auto px-5"
+      className="max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-[1150px] mx-auto px-4 sm:px-6 lg:px-8 mx-auto px-4 sm:px-5 py-8 lg:py-16"
     >
+      {/* Responsive Heading */}
       <h2 
-        className="text-2xl font-bold text-[#0f172a] mb-5"
+        className="text-xl md:text-2xl lg:text-3xl font-bold text-[#0f172a] mb-4 lg:mb-5 text-center lg:text-left"
         style={{
           opacity: isSectionVisible ? 1 : 0,
           transform: isSectionVisible ? 'none' : 'translateY(20px)',
@@ -75,28 +75,21 @@ export default function LeadsProcess() {
         Process — From Target to Demo
       </h2>
 
-      {/* .process - display:grid; grid-template-columns: 1fr 460px; gap:22px; align-items:start; margin-top:16px; */}
+      {/* Responsive Grid Layout */}
       <div 
-        className="grid items-start mt-4"
-        style={{
-          gridTemplateColumns: '1fr 460px',
-          gap: '22px'
-        }}
+        className="grid grid-cols-1 lg:grid-cols-[1fr_460px] gap-6 lg:gap-[22px] items-start mt-4 lg:mt-4"
       >
-        {/* .steps - display:flex; flex-direction:column; gap:14px */}
+        {/* Steps Column */}
         <div 
-          className="flex flex-col"
+          className="flex flex-col order-2 lg:order-1"
           style={{ gap: '14px' }}
         >
           {steps.map((step, index) => (
-            /* .step - display:flex; gap:12px; align-items:flex-start; background:#fff; padding:12px; border-radius:12px; box-shadow: 0 8px 30px rgba(9,30,66,0.03) */
             <div
               key={index}
-              className="flex items-start bg-white"
+              className="flex items-start bg-white p-3 lg:p-[12px] rounded-xl lg:rounded-[12px]"
               style={{
                 gap: '12px',
-                padding: '12px',
-                borderRadius: '12px',
                 boxShadow: '0 8px 30px rgba(9,30,66,0.03)',
                 opacity: isSectionVisible ? 1 : 0,
                 transform: isSectionVisible ? 'none' : 'translateX(-30px)',
@@ -104,21 +97,32 @@ export default function LeadsProcess() {
                 transitionDelay: `${200 + index * 150}ms`
               }}
             >
-              {/* .step .num - min-width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg,var(--accent),#55aaff); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700 */}
+              {/* Responsive Number Circle */}
               <div 
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white flex items-center justify-center font-bold text-sm lg:text-base flex-shrink-0"
                 style={{
+                  minWidth: '32px',
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '8px',
+                }}
+                // Large screen styles
+                data-lg-style={{
                   minWidth: '40px',
+                  width: '40px', 
                   height: '40px',
-                  borderRadius: '10px',
+                  borderRadius: '10px'
                 }}
               >
                 {step.num}
               </div>
-              <div>
-                <strong className="block text-[#0f172a]">{step.title}</strong>
-                {/* .step p - margin:0; color:var(--muted) */}
+              
+              <div className="flex-1">
+                <strong className="block text-[#0f172a] text-sm lg:text-base mb-1">
+                  {step.title}
+                </strong>
                 <p 
+                  className="text-xs lg:text-sm leading-relaxed"
                   style={{ 
                     margin: 0, 
                     color: '#64748b' 
@@ -131,8 +135,9 @@ export default function LeadsProcess() {
           ))}
         </div>
 
-        {/* .flow-wrap - background: linear-gradient(180deg,#ffffff,#fbfdff); padding:12px; border-radius:12px; box-shadow:var(--shadow) */}
+        {/* Flowchart Column - Show first on mobile */}
         <div 
+          className="order-1 lg:order-2"
           style={{
             background: 'linear-gradient(180deg,#ffffff,#fbfdff)',
             padding: '12px',
@@ -144,12 +149,16 @@ export default function LeadsProcess() {
             transitionDelay: '400ms'
           }}
         >
-          {/* svg.flowchart - width:100%; height:auto; display:block */}
+          {/* Responsive SVG Flowchart */}
           <svg 
-            className="flowchart block" 
-            style={{ width: '100%', height: 'auto' }}
+            className="block w-full h-auto" 
             viewBox="0 0 520 420" 
             role="img"
+            // Smaller viewBox for mobile to make text more readable
+            style={{ 
+              maxWidth: '100%',
+              height: 'auto'
+            }}
           >
             <defs>
               <linearGradient id="g1" x1="0" x2="1">
@@ -161,21 +170,38 @@ export default function LeadsProcess() {
               </marker>
             </defs>
 
-            {/* Nodes */}
+            {/* Top Row Nodes */}
             <rect x="16" y="20" rx="12" ry="12" width="160" height="72" fill="url(#g1)" stroke="#dbe9ff" />
-            <text x="96" y="55" fontSize="13" fontWeight="700" textAnchor="middle" fill="#07203b">Discovery & ICP</text>
+            <text x="96" y="50" fontSize="11" fontWeight="700" textAnchor="middle" fill="#07203b">
+              Discovery &amp;
+            </text>
+            <text x="96" y="65" fontSize="11" fontWeight="700" textAnchor="middle" fill="#07203b">
+              ICP
+            </text>
 
             <rect x="190" y="20" rx="12" ry="12" width="160" height="72" fill="url(#g1)" stroke="#dbe9ff" />
-            <text x="270" y="55" fontSize="13" fontWeight="700" textAnchor="middle" fill="#07203b">List Build</text>
+            <text x="270" y="55" fontSize="11" fontWeight="700" textAnchor="middle" fill="#07203b">
+              List Build
+            </text>
 
             <rect x="364" y="20" rx="12" ry="12" width="140" height="72" fill="url(#g1)" stroke="#dbe9ff" />
-            <text x="434" y="55" fontSize="13" fontWeight="700" textAnchor="middle" fill="#07203b">Outreach</text>
+            <text x="434" y="55" fontSize="11" fontWeight="700" textAnchor="middle" fill="#07203b">
+              Outreach
+            </text>
 
+            {/* Bottom Row Nodes */}
             <rect x="100" y="140" rx="12" ry="12" width="160" height="72" fill="url(#g1)" stroke="#dbe9ff" />
-            <text x="180" y="175" fontSize="13" fontWeight="700" textAnchor="middle" fill="#07203b">Qualification</text>
+            <text x="180" y="175" fontSize="11" fontWeight="700" textAnchor="middle" fill="#07203b">
+              Qualification
+            </text>
 
             <rect x="300" y="140" rx="12" ry="12" width="180" height="72" fill="url(#g1)" stroke="#dbe9ff" />
-            <text x="390" y="175" fontSize="13" fontWeight="700" textAnchor="middle" fill="#07203b">Handoff & Reporting</text>
+            <text x="390" y="170" fontSize="11" fontWeight="700" textAnchor="middle" fill="#07203b">
+              Handoff &amp;
+            </text>
+            <text x="390" y="185" fontSize="11" fontWeight="700" textAnchor="middle" fill="#07203b">
+              Reporting
+            </text>
 
             {/* Arrows */}
             <line x1="176" y1="56" x2="190" y2="56" stroke="#9aaedb" strokeWidth="2" markerEnd="url(#arrow)"></line>
@@ -183,9 +209,9 @@ export default function LeadsProcess() {
             <path d="M 270 92 C 270 110, 180 130, 180 140" stroke="#9aaedb" strokeWidth="2" fill="none" markerEnd="url(#arrow)"></path>
             <line x1="260" y1="176" x2="300" y2="176" stroke="#9aaedb" strokeWidth="2" markerEnd="url(#arrow)"></line>
 
-            {/* Labels */}
-            <text x="230" y="40" fontSize="11" fill="#5c6b85">Targeting →</text>
-            <text x="280" y="160" fontSize="11" fill="#5c6b85">Score & Verify →</text>
+            {/* Responsive Labels */}
+            <text x="230" y="35" fontSize="9" fill="#5c6b85">Targeting →</text>
+            <text x="280" y="155" fontSize="9" fill="#5c6b85">Score &amp; Verify →</text>
           </svg>
         </div>
       </div>
