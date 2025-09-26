@@ -381,7 +381,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="next-size-adjust" content="" />
+        
        
         {/* Schema.org Structured Data - Product Schema [attached_file:1] */}
         <script
