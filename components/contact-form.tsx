@@ -163,7 +163,7 @@ export function ContactForm() {
                       value={formData.countryCode}
                       onValueChange={(value) => handleInputChange("countryCode", value)}
                     >
-                      <SelectTrigger className="w-32">
+                      <SelectTrigger className="w-32" type="button">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
@@ -195,7 +195,7 @@ export function ContactForm() {
     value={formData.subject} 
     onValueChange={(value) => handleInputChange("subject", value)}
   >
-    <SelectTrigger id="contact-subject" className="mt-1">
+    <SelectTrigger id="contact-subject" className="mt-1" type="button">
       <SelectValue placeholder="Select a subject" />
     </SelectTrigger>
     <SelectContent  side="bottom" align="start">
