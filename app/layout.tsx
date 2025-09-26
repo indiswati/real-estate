@@ -35,7 +35,6 @@ export const metadata: Metadata = {
   title: "Dubai Off-Plan Properties & Open Projects – Verified Listings",
   description: "Discover premium off-plan properties and open projects in Dubai. Verified listings, expert guidance, and comprehensive real estate lead generation services.",
   generator: "Open Projects Dubai",
-  viewport: "width=device-width, initial-scale=1",
   keywords: "Dubai off-plan properties, open projects Dubai, real estate Dubai, property investment, verified listings, open projects dubai, off plan properties dubai, buy off plan dubai, dubai off plan apartments, dubai off plan villas, new projects dubai, openprojects.ae, dubai real estate leads, property investment dubai, dubai off plan payment plans, ready to move projects dubai, dubai property developers, dubai real estate marketing, real estate lead generation dubai",
   authors: [{ name: "Open Projects Dubai" }],
   robots: "index, follow",
@@ -382,7 +381,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         
-       
+       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+       <meta name="next-size-adjust" content="" />
         {/* Schema.org Structured Data - Product Schema [attached_file:1] */}
         <script
           type="application/ld+json"
