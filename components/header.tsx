@@ -79,7 +79,13 @@ export function Header() {
             >
               About Us
             </button>
-
+            <button
+              className="hover:text-blue-600 transition-colors duration-300 cursor-pointer"
+              style={{ transform: "none" }} 
+              
+            >
+              Buy
+            </button>
             <div className="relative group">
               <div className="flex items-center gap-1">
                 <button
@@ -231,15 +237,7 @@ export function Header() {
               Contact
             </button>
 
-            <button
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300"
-              style={{
-                boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
-                transform: "none",
-              }}
-            >
-              Buy Now
-            </button>
+            
           </nav>
 
           {/* Desktop Auth Buttons */}
