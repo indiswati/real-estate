@@ -93,7 +93,6 @@ export const metadata: Metadata = {
     'msapplication-TileColor': '#ffffff',
     'msapplication-TileImage': 'https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-ms-icon-144x144.webp',
     'theme-color': '#ffffff',
-    
   }
 }
 
