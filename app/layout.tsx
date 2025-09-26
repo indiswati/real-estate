@@ -382,7 +382,7 @@ export default function RootLayout({
       <head>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-       <meta name="next-size-adjust" content="" />
+       <meta name="next-size-adjust" content="100%" />
         
 
         {/* Schema.org Structured Data - Product Schema [attached_file:1] */}
