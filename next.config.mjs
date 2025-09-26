@@ -9,6 +9,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  cleanDistDir: true,
 }
 
 export default nextConfig
