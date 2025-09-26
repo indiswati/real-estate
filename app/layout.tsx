@@ -4,6 +4,7 @@ import { Montserrat, Poppins, Roboto, Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+import RemoveInvalidMeta from "./removeInvalidMeta"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -380,10 +381,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-       <meta name="next-size-adjust" content="100%" />
-        
+
+        <RemoveInvalidMeta />
 
         {/* Schema.org Structured Data - Product Schema [attached_file:1] */}
         <script
