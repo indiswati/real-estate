@@ -188,23 +188,26 @@ export function ContactForm() {
 
                 {/* Subject Field */}
                 <div>
-                  <Label htmlFor="contact-subject" className="text-sm font-medium text-gray-700">
-                    Subject
-                  </Label>
-                  <Select value={formData.subject} onValueChange={(value) => handleInputChange("subject", value)}>
-                    <SelectTrigger id="contact-subject" className="mt-1">
-                      <SelectValue placeholder="Select a subject" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="general">General Inquiry</SelectItem>
-                      <SelectItem value="buying">Property Buying</SelectItem>
-                      <SelectItem value="selling">Property Selling</SelectItem>
-                      <SelectItem value="investment">Investment Opportunities</SelectItem>
-                      <SelectItem value="partnership">Partnership</SelectItem>
-                      <SelectItem value="support">Technical Support</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+  <Label htmlFor="contact-subject" className="text-sm font-medium text-gray-700">
+    Subject
+  </Label>
+  <Select 
+    value={formData.subject} 
+    onValueChange={(value) => handleInputChange("subject", value)}
+  >
+    <SelectTrigger id="contact-subject" className="mt-1">
+      <SelectValue placeholder="Select a subject" />
+    </SelectTrigger>
+    <SelectContent  side="bottom" align="start">
+      <SelectItem value="general">General Inquiry</SelectItem>
+      <SelectItem value="buying">Property Buying</SelectItem>
+      <SelectItem value="selling">Property Selling</SelectItem>
+      <SelectItem value="investment">Investment Opportunities</SelectItem>
+      <SelectItem value="partnership">Partnership</SelectItem>
+      <SelectItem value="support">Technical Support</SelectItem>
+    </SelectContent>
+  </Select>
+</div>
 
                 {/* Message Field */}
                 <div>

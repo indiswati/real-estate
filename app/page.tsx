@@ -27,9 +27,9 @@ export default function HomePage() {
       
       <WhyChooseUs />
       <FAQ />
-      <div id="contact">
+      
       <ContactForm />
-      </div>
+      
       <Footer />
       <button className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 z-50 animate-bounce">
         <svg

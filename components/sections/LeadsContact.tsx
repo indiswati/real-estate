@@ -52,7 +52,7 @@ export default function LeadsContact() {
   return (
     <section 
       ref={sectionRef}
-      id="contact" 
+      
       className="max-w-[1150px] mx-auto px-5 mt-10"
       style={{ paddingBottom: '60px' }}
       aria-labelledby="contact-heading"

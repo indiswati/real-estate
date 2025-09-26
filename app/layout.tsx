@@ -45,7 +45,6 @@ export const metadata: Metadata = {
       'en-AE': 'https://www.openprojects.ae',
       'de-DE': 'https://www.openprojects.ae',
       'es-ES': 'https://www.openprojects.ae',
-      // Add other locales as needed
     }
   },
   verification: {
@@ -93,9 +92,11 @@ export const metadata: Metadata = {
   other: {
     'msapplication-TileColor': '#ffffff',
     'msapplication-TileImage': 'https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-ms-icon-144x144.webp',
-    'theme-color': '#ffffff'
+    'theme-color': '#ffffff',
+    'next-size-adjust': '' // Add this to override Next.js default
   }
 }
+
 
 
 // Product Schema [attached_file:1]
@@ -381,10 +382,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <title>Lead Generation for Off-Plan & Open Projects Dubai</title>
-        
-
+       
         {/* Schema.org Structured Data - Product Schema [attached_file:1] */}
         <script
           type="application/ld+json"

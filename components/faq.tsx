@@ -303,8 +303,8 @@ export function FAQ() {
                 >
                   {item.question}
                 </span>
-                <div className="flex-shrink-0">
-                  <div
+                <span className="flex-shrink-0">
+                  <span
                     className="w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300"
                     style={{
                       background: openIndex === index 
@@ -323,8 +323,8 @@ export function FAQ() {
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                  </div>
-                </div>
+                  </span>
+                </span>
               </button>
 
               {/* Answer Content */}
