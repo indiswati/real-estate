@@ -1,15 +1,12 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 
 export function ContactForm() {
@@ -52,7 +49,9 @@ export function ContactForm() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent animate-fade-in">Get In Touch</h2>
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-blue-600 bg-clip-text text-transparent animate-fade-in">
+              Get In Touch
+            </h2>
             <p className="text-xl text-gray-600 mb-16 font-body max-w-3xl mx-auto leading-relaxed">
               Ready to start your real estate journey in Dubai? Contact our expert team for personalized guidance and
               support.
@@ -66,8 +65,8 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-800">Email Address</h3>
-                  <p className="text-gray-600 italic text-lg leading-relaxed ">info@openprojects.ae</p>
-                  <p className="text-gray-600 italic text-lg leading-relaxed ">support@openprojects.ae</p>
+                  <p className="text-gray-600 italic text-lg leading-relaxed">info@openprojects.ae</p>
+                  <p className="text-gray-600 italic text-lg leading-relaxed">support@openprojects.ae</p>
                 </div>
               </div>
 
@@ -77,8 +76,8 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-800">Phone Number</h3>
-                  <p className="text-gray-600 italic text-lg leading-relaxed ">+971 4 XXX XXXX</p>
-                  <p className="text-gray-600 italic text-lg leading-relaxed ">+971 50 XXX XXXX</p>
+                  <p className="text-gray-600 italic text-lg leading-relaxed">+971 4 XXX XXXX</p>
+                  <p className="text-gray-600 italic text-lg leading-relaxed">+971 50 XXX XXXX</p>
                 </div>
               </div>
 
@@ -88,7 +87,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-800">Office Address</h3>
-                  <p className="text-gray-600 italic text-lg leading-relaxed ">
+                  <p className="text-gray-600 italic text-lg leading-relaxed">
                     Business Bay, Dubai
                     <br />
                     United Arab Emirates
@@ -102,7 +101,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-800">Business Hours</h3>
-                  <p className="text-gray-600 italic text-lg leading-relaxed ">
+                  <p className="text-gray-600 italic text-lg leading-relaxed">
                     Monday - Friday: 9:00 AM - 6:00 PM
                     <br />
                     Saturday: 10:00 AM - 4:00 PM
@@ -159,21 +158,17 @@ export function ContactForm() {
                     Phone Number *
                   </Label>
                   <div className="flex mt-1">
-                    <Select
+                    <select
                       value={formData.countryCode}
-                      onValueChange={(value) => handleInputChange("countryCode", value)}
+                      onChange={(e) => handleInputChange("countryCode", e.target.value)}
+                      className="w-32 px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     >
-                      <SelectTrigger className="w-32" type="button">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {countryCodes.map((country) => (
-                          <SelectItem key={country.code} value={country.code}>
-                            {country.code} ({country.country})
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                      {countryCodes.map((country) => (
+                        <option key={country.code} value={country.code}>
+                          {country.code} ({country.country})
+                        </option>
+                      ))}
+                    </select>
                     <Input
                       id="contact-phone"
                       type="tel"
@@ -188,26 +183,24 @@ export function ContactForm() {
 
                 {/* Subject Field */}
                 <div>
-  <Label htmlFor="contact-subject" className="text-sm font-medium text-gray-700">
-    Subject
-  </Label>
-  <Select 
-    value={formData.subject} 
-    onValueChange={(value) => handleInputChange("subject", value)}
-  >
-    <SelectTrigger id="contact-subject" className="mt-1" type="button">
-      <SelectValue placeholder="Select a subject" />
-    </SelectTrigger>
-    <SelectContent  side="bottom" align="start">
-      <SelectItem value="general">General Inquiry</SelectItem>
-      <SelectItem value="buying">Property Buying</SelectItem>
-      <SelectItem value="selling">Property Selling</SelectItem>
-      <SelectItem value="investment">Investment Opportunities</SelectItem>
-      <SelectItem value="partnership">Partnership</SelectItem>
-      <SelectItem value="support">Technical Support</SelectItem>
-    </SelectContent>
-  </Select>
-</div>
+                  <Label htmlFor="contact-subject" className="text-sm font-medium text-gray-700">
+                    Subject
+                  </Label>
+                  <select
+                    id="contact-subject"
+                    value={formData.subject}
+                    onChange={(e) => handleInputChange("subject", e.target.value)}
+                    className="mt-1 w-full px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="buying">Property Buying</option>
+                    <option value="selling">Property Selling</option>
+                    <option value="investment">Investment Opportunities</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="support">Technical Support</option>
+                  </select>
+                </div>
 
                 {/* Message Field */}
                 <div>
@@ -226,32 +219,33 @@ export function ContactForm() {
                 </div>
 
                 {/* Terms Checkbox */}
-                <div className="flex items-center gap-2">
-
+                <div className="flex items-start gap-2">
                   <input
                     id="termsAgree"
                     required
-                    className="w-4 h-4 rounded border-gray-300 focus:ring-2 focus:ring-blue-500"
+                    className="w-4 h-4 mt-1 rounded border-gray-300 focus:ring-2 focus:ring-blue-500"
                     type="checkbox"
                     name="termsAgree"
                     checked={formData.agreeToTerms}
                     onChange={(e) => handleInputChange("agreeToTerms", e.target.checked)}
                   />
                   <label htmlFor="termsAgree" className="text-sm text-gray-600 leading-relaxed">
-                    I agree to the{" "} <a href="#terms-conditions" className="text-blue-600 hover:underline">
+                    I agree to the{" "}
+                    <a href="#terms-conditions" className="text-blue-600 hover:underline">
                       Terms & Conditions
-                    </a>{" "} and{" "} <a href="#privacy-policy" className="text-blue-600 hover:underline">
+                    </a>{" "}
+                    and{" "}
+                    <a href="#privacy-policy" className="text-blue-600 hover:underline">
                       Privacy Policy
-                    </a> I consent to being contacted by Open Projects Dubai regarding my inquiry.*</label>
-
-
-
+                    </a>
+                    . I consent to being contacted by Open Projects Dubai regarding my inquiry.*
+                  </label>
                 </div>
 
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  className="w-full btn-text bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition-colors duration-200"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition-colors duration-200"
                   disabled={!formData.agreeToTerms}
                 >
                   Send Message
