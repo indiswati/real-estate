@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     'msapplication-TileColor': '#ffffff',
     'msapplication-TileImage': 'https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-ms-icon-144x144.webp',
     'theme-color': '#ffffff',
-    'next-size-adjust': '' // Add this to override Next.js default
+    
   }
 }
 
@@ -381,7 +381,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        
+        <meta name="next-size-adjust" content="" />
        
         {/* Schema.org Structured Data - Product Schema [attached_file:1] */}
         <script
