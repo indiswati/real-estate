@@ -4,7 +4,6 @@ import { Montserrat, Poppins, Roboto, Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
-import RemoveInvalidMeta from "./removeInvalidMeta"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -382,8 +381,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
 
-        <RemoveInvalidMeta />
-
+       
         {/* Schema.org Structured Data - Product Schema [attached_file:1] */}
         <script
           type="application/ld+json"
