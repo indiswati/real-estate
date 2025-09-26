@@ -38,7 +38,7 @@ export default function Features() {
 
   // Get features data based on URL
   const getFeaturesData = () => {
-    if (pathname.includes('seller')) {
+    if (pathname.includes('real-estate-seller-leads')) {
       return {
         title: "Why Choose L4RG Seller Leads?",
         features: [
@@ -73,7 +73,7 @@ export default function Features() {
       };
     }
 
-    if (pathname.includes('broker')) {
+    if (pathname.includes('real-estate-broker-leads')) {
       return {
         title: "Why Choose L4RG Broker Leads?",
         features: [
@@ -108,7 +108,7 @@ export default function Features() {
       };
     }
 
-    if (pathname.includes('appointment')) {
+    if (pathname.includes('real-estate-appointment-setting')) {
       return {
         title: "Why Choose Our Appointment Setting?",
         features: [
@@ -276,19 +276,19 @@ export default function Features() {
                 className="font-semibold text-sm"
                 style={{ color: '#062235' }}
               >
-                {pathname.includes('seller') && "Trusted by 500+ Real Estate Agencies"}
-                {pathname.includes('broker') && "Connecting 1000+ Successful Partnerships"}
-                {pathname.includes('appointment') && "95% Client Satisfaction Rate"}
-                {!pathname.includes('seller') && !pathname.includes('broker') && !pathname.includes('appointment') && "Rated 5 Stars by Industry Professionals"}
+                {pathname.includes('real-estate-seller-leads') && "Trusted by 500+ Real Estate Agencies"}
+                {pathname.includes('real-estate-broker-leads') && "Connecting 1000+ Successful Partnerships"}
+                {pathname.includes('real-estate-appointment-setting') && "95% Client Satisfaction Rate"}
+                {!pathname.includes('real-estate-seller-leads') && !pathname.includes('real-estate-broker-leads') && !pathname.includes('real-estate-appointment-setting') && "Rated 5 Stars by Industry Professionals"}
               </div>
               <div 
                 className="text-xs"
                 style={{ color: '#64748b' }}
               >
-                {pathname.includes('seller') && "Leading seller lead generation platform"}
-                {pathname.includes('broker') && "Premier broker networking solution"}
-                {pathname.includes('appointment') && "Professional appointment setting service"}
-                {!pathname.includes('seller') && !pathname.includes('broker') && !pathname.includes('appointment') && "Comprehensive lead generation platform"}
+                {pathname.includes('real-estate-seller-leads') && "Leading seller lead generation platform"}
+                {pathname.includes('real-estate-broker-leads') && "Premier broker networking solution"}
+                {pathname.includes('real-estate-appointment-setting') && "Professional appointment setting service"}
+                {!pathname.includes('real-estate-seller-leads') && !pathname.includes('real-estate-broker-leads') && !pathname.includes('real-estate-appointment-setting') && "Comprehensive lead generation platform"}
               </div>
             </div>
           </div>

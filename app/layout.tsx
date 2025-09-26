@@ -33,20 +33,70 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "Dubai Off-Plan Properties & Open Projects – Verified Listings",
-  description:
-    "Discover premium off-plan properties and open projects in Dubai. Verified listings, expert guidance, and comprehensive real estate lead generation services.",
+  description: "Discover premium off-plan properties and open projects in Dubai. Verified listings, expert guidance, and comprehensive real estate lead generation services.",
   generator: "Open Projects Dubai",
-  keywords: "Dubai off-plan properties, open projects Dubai, real estate Dubai, property investment, verified listings",
+  keywords: "Dubai off-plan properties, open projects Dubai, real estate Dubai, property investment, verified listings, open projects dubai, off plan properties dubai, buy off plan dubai, dubai off plan apartments, dubai off plan villas, new projects dubai, openprojects.ae, dubai real estate leads, property investment dubai, dubai off plan payment plans, ready to move projects dubai, dubai property developers, dubai real estate marketing, real estate lead generation dubai",
   authors: [{ name: "Open Projects Dubai" }],
-  openGraph: {
-    title: "Dubai Off-Plan Properties & Open Projects – Verified Listings",
-    description:
-      "Discover premium off-plan properties and open projects in Dubai. Verified listings, expert guidance, and comprehensive real estate lead generation services.",
-    url: "https://www.openprojects.ae/",
-    siteName: "Open Projects Dubai",
-    type: "website",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.openprojects.ae",
+    languages: {
+      'en-US': 'https://www.openprojects.ae',
+      'en-AE': 'https://www.openprojects.ae',
+      'de-DE': 'https://www.openprojects.ae',
+      'es-ES': 'https://www.openprojects.ae',
+      // Add other locales as needed
+    }
   },
+  verification: {
+    google: "8lLnfgtzeWYzbG6mAgPavNtZqe5C-2KHD63EgwGCYY4",
+    yandex: "6c4c214b1ecfc78a",
+    other: {
+      'msvalidate.01': "3F0EE338EB9D6CC7D5B8613FB0D3B8F9",
+      'p:domain_verify': "23785c7c6b52745236df36e5ed7de744"
+    }
+  },
+  openGraph: {
+    title: "Off-Plan Properties & Open Projects in Dubai | OpenProjects.ae",
+    description: "Discover Dubai's top off-plan properties and open projects. Generate leads, book viewings, and invest with trusted developers on OpenProjects.ae.",
+    url: "https://www.openprojects.ae",
+    siteName: "OpenProjects.ae - Dubai Real Estate Leads",
+    type: "website",
+    locale: "en_US",
+    images: [{
+      url: "https://d3euc6irt3la1j.cloudfront.net/Dubai-Off-Plan-Open-Projects.webp",
+      width: 1200,
+      height: 630,
+      alt: "Dubai Skyline with Off-Plan Properties and Open Projects"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Off-Plan Properties & Open Projects in Dubai | OpenProjects.ae",
+    description: "Explore off-plan projects, villas, and apartments in Dubai. Get verified leads, book appointments, and invest smartly with OpenProjects.ae.",
+    creator: "@OpenProjectsUAE",
+    images: ["https://d3euc6irt3la1j.cloudfront.net/Dubai-Off-Plan-Open-Projects.webp"]
+  },
+  icons: {
+    icon: [
+      { url: "https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-favicon-16x16.webp", sizes: "16x16" },
+      { url: "https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-favicon-32x32.webp", sizes: "32x32" },
+      { url: "https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-favicon-96x96.webp", sizes: "96x96" }
+    ],
+    apple: [
+      { url: "https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-57x57.webp", sizes: "57x57" },
+      { url: "https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-60x60.webp", sizes: "60x60" },
+      { url: "https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-180x180.webp", sizes: "180x180" }
+    ]
+  },
+  manifest: "https://www.openprojects.ae/manifest.json",
+  other: {
+    'msapplication-TileColor': '#ffffff',
+    'msapplication-TileImage': 'https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-ms-icon-144x144.webp',
+    'theme-color': '#ffffff'
+  }
 }
+
 
 // Product Schema [attached_file:1]
 const productSchema = {
@@ -330,95 +380,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta charSet="UTF-8" />
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-
         <title>Lead Generation for Off-Plan & Open Projects Dubai</title>
-        <meta name="description" content="Generate high-quality buyer & investor leads for Dubai off-plan properties and open projects. Boost sales with targeted campaigns and real-time tracking." />
-        <meta name="keywords" content="open projects dubai, off plan properties dubai, buy off plan dubai, dubai off plan apartments, dubai off plan villas, new projects dubai, openprojects.ae, dubai real estate leads, property investment dubai, dubai off plan payment plans, ready to move projects dubai, dubai property developers, dubai real estate marketing, real estate lead generation dubai" />
-        <meta property="og:site_name" content="OpenProjects.ae - Dubai Real Estate Leads" />
-        <meta property="og:url" content="https://www.openprojects.ae" />
-        <meta property="og:image:alt" content="Dubai Skyline with Off-Plan Properties and Open Projects" />
-        <meta property="og:title" content="Off-Plan Properties & Open Projects in Dubai | OpenProjects.ae" />
-        <meta property="og:description" content="Discover Dubai's top off-plan properties and open projects. Generate leads, book viewings, and invest with trusted developers on OpenProjects.ae." />
-        <meta property="og:keywords" content="open projects dubai, off plan properties dubai, buy off plan dubai, dubai off plan apartments, dubai off plan villas, new projects dubai, openprojects.ae, dubai real estate leads, property investment dubai, dubai off plan payment plans, ready to move projects dubai, dubai property developers, dubai real estate marketing, real estate lead generation dubai" />
-        <meta name="twitter:title" content="Off-Plan Properties & Open Projects in Dubai | OpenProjects.ae" />
-        <meta name="twitter:description" content="Explore off-plan projects, villas, and apartments in Dubai. Get verified leads, book appointments, and invest smartly with OpenProjects.ae." />
-        <meta property="twitter:image:alt" content="Dubai Skyline showcasing Off-Plan Properties and Open Projects" />
-        <meta name="twitter:image" content="https://d3euc6irt3la1j.cloudfront.net/Dubai-Off-Plan-Open-Projects.webp" />
-        <meta property="og:image" content="https://d3euc6irt3la1j.cloudfront.net/Dubai-Off-Plan-Open-Projects.webp" />
-        <meta property="og:image:secure_url" content="https://d3euc6irt3la1j.cloudfront.net/Dubai-Off-Plan-Open-Projects.webp" />
-        <meta property="og:url" content="https://www.openprojects.ae" />
-        <link rel="alternate" href="https://www.openprojects.ae" hrefLang="en-US" />
-        <link rel="canonical" href="https://www.openprojects.ae" />
-        <meta name="msvalidate.01" content="3F0EE338EB9D6CC7D5B8613FB0D3B8F9" />
-        <meta name="google-site-verification" content="8lLnfgtzeWYzbG6mAgPavNtZqe5C-2KHD63EgwGCYY4" />
-        <meta name="yandex-verification" content="6c4c214b1ecfc78a" />
-        <meta name="p:domain_verify" content="23785c7c6b52745236df36e5ed7de744" />
-        <meta property="og:type" content="website" />
-        <meta name="author" content="OpenProjects" />
-        <meta property="twitter:image:type" content="images/webp" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:image:type" content="images/webp" />
-        <meta property="og:image:width" content="Fix Size" />
-        <meta property="og:image:height" content="Fix Size" />
-        <meta property="og:type" content="website" />
-        <meta name="copyright" content="&copy; 2025" />
-        <meta name="twitter:creator" content="@OpenProjectsUAE" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:locale" content="en_US" />
         
-        {/* Apple Touch Icons */}
-        <link rel="apple-touch-icon" sizes="57x57" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-57x57.webp" />
-        <link rel="apple-touch-icon" sizes="60x60" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-60x60.webp" />
-        <link rel="apple-touch-icon" sizes="72x72" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-72x72.webp" />
-        <link rel="apple-touch-icon" sizes="76x76" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-76x76.webp" />
-        <link rel="apple-touch-icon" sizes="114x114" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-114x114.webp" />
-        <link rel="apple-touch-icon" sizes="120x120" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-120x120.webp" />
-        <link rel="apple-touch-icon" sizes="144x144" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-144x144.webp" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-152x152.webp" />
-        <link rel="apple-touch-icon" sizes="180x180" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-apple-icon-180x180.webp" />
-        
-        {/* Standard Icons */}
-        <link rel="icon" type="image/webp" sizes="192x192" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-android-icon-192x192.webp" />
-        <link rel="icon" type="image/webp" sizes="32x32" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-favicon-32x32.webp" />
-        <link rel="icon" type="image/webp" sizes="96x96" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-favicon-96x96.webp" />
-        <link rel="icon" type="image/webp" sizes="16x16" href="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-favicon-16x16.webp" />
-        <link rel="manifest" href="https://www.openprojects.ae//manifest.json" />
-        
-        {/* Microsoft Tags */}
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="https://d3euc6irt3la1j.cloudfront.net/openprojects-dubai-ms-icon-144x144.webp" />
-        <meta name="theme-color" content="#ffffff" />
-        
-        {/* Multiple Locale Support */}
-        <meta property="og:locale:alternate" content="en-US" />
-        <meta property="og:locale:alternate" content="en-AE" />
-        <meta property="og:locale:alternate" content="de-DE" />
-        <meta property="og:locale:alternate" content="es-ES" />
-        <meta property="og:locale:alternate" content="fr-FR" />
-        <meta property="og:locale:alternate" content="pt-BR" />
-        <meta property="og:locale:alternate" content="en-GB" />
-        <meta property="og:locale:alternate" content="en-CA" />
-        <meta property="og:locale:alternate" content="en-MY" />
-        <meta property="og:locale:alternate" content="en-SG" />
-        <meta property="og:locale:alternate" content="en-NG" />
-        <meta property="og:locale:alternate" content="en-ID" />
-        <meta property="og:locale:alternate" content="en-IE" />
-        <meta property="og:locale:alternate" content="en-AU" />
-        <meta property="og:locale:alternate" content="en-IN" />
-        <meta property="og:locale:alternate" content="en-NZ" />
-        <meta property="og:locale:alternate" content="en-PH" />
-        <meta property="og:locale:alternate" content="en-ZA" />
-        <meta property="og:locale:alternate" content="es-MX" />
-        <meta property="og:locale:alternate" content="es-CO" />
-        <meta property="og:locale:alternate" content="es-PE" />
-        <meta property="og:locale:alternate" content="es-AR" />
-        <meta property="og:locale:alternate" content="es-CL" />
-        <meta property="og:locale:alternate" content="es-VE" />
-        <meta property="og:locale:alternate" content="pt-PT" />
-        <meta property="og:locale:alternate" content="fr-CA" />
-        <meta property="og:locale:alternate" content="fr-BE" />
 
         {/* Schema.org Structured Data - Product Schema [attached_file:1] */}
         <script

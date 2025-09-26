@@ -38,7 +38,7 @@ export default function LeadProcess() {
 
   // Get process data based on URL
   const getProcessData = () => {
-    if (pathname.includes('seller')) {
+    if (pathname.includes('real-estate-seller-leads')) {
       return {
         title: "Our Process — From Lead to Listing",
         steps: [
@@ -86,7 +86,7 @@ export default function LeadProcess() {
       };
     }
 
-    if (pathname.includes('broker')) {
+    if (pathname.includes('real-estate-broker-leads')) {
       return {
         title: "Broker Process — From Research to Partnership",
         steps: [
@@ -134,7 +134,7 @@ export default function LeadProcess() {
       };
     }
 
-    if (pathname.includes('appointment')) {
+    if (pathname.includes('real-estate-appointment-setting')) {
       return {
         title: "Appointment Process — From Contact to Meeting",
         steps: [

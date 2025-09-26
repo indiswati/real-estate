@@ -38,7 +38,7 @@ export default function WhatYouGet() {
 
   // Get content data based on URL
   const getContentData = () => {
-    if (pathname.includes('seller')) {
+    if (pathname.includes('real-estate-seller-leads')) {
       return {
         title: "What You Get with L4RG Seller Leads",
         paragraphs: [
@@ -57,7 +57,7 @@ export default function WhatYouGet() {
       };
     }
 
-    if (pathname.includes('broker')) {
+    if (pathname.includes('real-estate-broker-leads')) {
       return {
         title: "What You Get with L4RG Broker Leads",
         paragraphs: [
@@ -74,7 +74,7 @@ export default function WhatYouGet() {
       };
     }
 
-    if (pathname.includes('appointment')) {
+    if (pathname.includes('real-estate-appointment-setting')) {
       return {
         title: "What You Get with L4RG Appointment Setting",
         paragraphs: [

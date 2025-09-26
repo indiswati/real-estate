@@ -83,7 +83,7 @@ export function Footer() {
 
   return (
     <footer
-      id="contact"
+      
       className="bg-gradient-to-br from-blue-900 to-indigo-900 text-white pt-[40px]"
       style={{ opacity: isFooterVisible ? 1 : 0 }}
       ref={footerRef}

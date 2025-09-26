@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 
@@ -32,7 +32,7 @@ export function Header() {
   const handleLeadServicesClick = (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
-    router.push("/service")
+    router.push("/services")
   }
 
   const handleDropdownArrowClick = (e: React.MouseEvent) => {
@@ -123,7 +123,7 @@ export function Header() {
                 <button 
                   className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 rounded-t-xl group w-full text-left" 
                   onClick={() => {
-                    router.push("/leads/buyer")
+                    router.push("/services/real-estate-buyer-leads")
                     closeDropdown()
                   }}
                 >
@@ -146,7 +146,7 @@ export function Header() {
                 <button 
                   className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 group w-full text-left" 
                   onClick={() => {
-                    router.push("/leads/seller")
+                    router.push("/services/real-estate-seller-leads")
                     closeDropdown()
                   }}
                 >
@@ -169,7 +169,7 @@ export function Header() {
                 <button 
                   className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 group w-full text-left" 
                   onClick={() => {
-                    router.push("/leads/broker")
+                    router.push("/services/real-estate-broker-leads")
                     closeDropdown()
                   }}
                 >
@@ -192,7 +192,7 @@ export function Header() {
                 <button 
                   className="flex items-center gap-3 px-4 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 rounded-b-xl group w-full text-left" 
                   onClick={() => {
-                    router.push("/leads/appointment")
+                    router.push("/services/real-estate-appointment-setting")
                     closeDropdown()
                   }}
                 >
@@ -218,7 +218,7 @@ export function Header() {
             <button
               className="hover:text-blue-600 transition-colors duration-300 cursor-pointer"
               style={{ transform: "none" }} 
-              onClick={() => router.push("/service")}
+              
             >
               Properties
             </button>
@@ -232,7 +232,9 @@ export function Header() {
             <button
               className="hover:text-blue-600 transition-colors duration-300 cursor-pointer"
               style={{ transform: "none" }} 
-              onClick={() => scrollToElement('contact')}
+              onClick={(e) => { e.preventDefault()
+    e.stopPropagation();
+    router.push('contact-us');}}
             >
               Contact
             </button>

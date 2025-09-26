@@ -45,7 +45,7 @@ export default function LeadsHero() {
 
   // Get hero data based on URL
   const getHeroData = () => {
-    if (pathname.includes('seller')) {
+    if (pathname.includes('real-estate-seller-leads')) {
       return {
         title: "Seller Leads for Real Estate — 20 Years of Proven Expertise",
         description: "For two decades, L4RG has been the trusted partner for real estate professionals seeking high-quality seller leads. With over 1.7 lakh verified prospects delivered, we empower agencies, brokers, and agents to close listings faster and grow their market share.",
@@ -68,7 +68,7 @@ export default function LeadsHero() {
       };
     }
 
-    if (pathname.includes('broker')) {
+    if (pathname.includes('real-estate-broker-leads')) {
       return {
         title: "Broker Leads for Real Estate — 20 Years of Proven Expertise",
         description: "4RG has been the trusted partner for real estate professionals, delivering over 1.7 lakh high-quality broker leads that drive sales, partnerships, and long-term business growth.",
@@ -91,7 +91,7 @@ export default function LeadsHero() {
       };
     }
 
-    if (pathname.includes('appointment')) {
+    if (pathname.includes('real-estate-appointment-setting')) {
       return {
         title: "Appointment Setting Services for Real Estate — 20 Years of Expertise",
         description: "L4RG has been helping real estate businesses secure qualified meetings with buyers, sellers, and brokers. With 20 years of industry experience, we ensure your sales team focuses only on closing deals, not chasing prospects.",
@@ -264,7 +264,7 @@ export default function LeadsHero() {
                 onClick={() => scrollToSection('#contact')}
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 sm:px-6 py-2.5 rounded-full hover:shadow-lg transition-all duration-300 text-sm sm:text-base font-semibold"
               >
-                {pathname.includes('appointment') ? 'Book Consultation' : 'Book a Demo'}
+                {pathname.includes('real-estate-appointment-setting') ? 'Book Consultation' : 'Book a Demo'}
               </button>
               <button
                 onClick={() => scrollToSection('#packages')}

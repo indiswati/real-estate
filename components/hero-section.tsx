@@ -53,9 +53,9 @@ export function HeroSection() {
                       style={{ animationDelay: "0.9s" }}
                       tabIndex={0}
                     >
-                      <div className="text-blue-600 text-3xl mb-3 group-hover:scale-110 transition-transform">🏠</div>
-                      <div className="font-semibold text-gray-800 text-lg">Buyer</div>
-                      <div className="text-sm text-gray-600 mt-1">Looking to buy property</div>
+                      <span className="text-blue-600 text-3xl mb-3 group-hover:scale-110 transition-transform">🏠</span>
+                      <span className="font-semibold text-gray-800 text-lg">Buyer</span>
+                      <span className="text-sm text-gray-600 mt-1">Looking to buy property</span>
                     </button>
                     <button
                       onClick={() => setIsSellerModalOpen(true)}
@@ -63,9 +63,9 @@ export function HeroSection() {
                       style={{ animationDelay: "1.1s" }}
                       tabIndex={0}
                     >
-                      <div className="text-green-600 text-3xl mb-3 group-hover:scale-110 transition-transform">💰</div>
-                      <div className="font-semibold text-gray-800 text-lg">Seller</div>
-                      <div className="text-sm text-gray-600 mt-1">Looking to sell property</div>
+                      <span className="text-green-600 text-3xl mb-3 group-hover:scale-110 transition-transform">💰</span>
+                      <span className="font-semibold text-gray-800 text-lg">Seller</span>
+                      <span className="text-sm text-gray-600 mt-1">Looking to sell property</span>
                     </button>
                   </div>
                 </div>

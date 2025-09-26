@@ -39,7 +39,7 @@ export default function Hero() {
 
   // Get hero data based on URL
   const getHeroData = () => {
-    if (pathname.includes('seller')) {
+    if (pathname.includes('real-estate-seller-leads')) {
       return {
         title: "Premium Seller Leads for Real Estate Professionals",
         subtitle: "Connect with motivated property owners ready to sell - verified, qualified, and exclusive to your market area",
@@ -55,7 +55,7 @@ export default function Hero() {
       };
     }
 
-    if (pathname.includes('broker')) {
+    if (pathname.includes('real-estate-broker-leads')) {
       return {
         title: "Verified Broker Network & Partnership Opportunities",
         subtitle: "Connect with licensed, high-performing real estate brokers across your target markets for strategic growth",
@@ -71,7 +71,7 @@ export default function Hero() {
       };
     }
 
-    if (pathname.includes('appointment')) {
+    if (pathname.includes('real-estate-appointment-setting')) {
       return {
         title: "Professional Appointment Setting Services",
         subtitle: "Fill your calendar with confirmed, qualified meetings - from prospect identification to final confirmation",

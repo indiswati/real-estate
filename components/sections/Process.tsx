@@ -39,7 +39,7 @@ export default function Process() {
 
   // Get process data based on URL
   const getProcessData = () => {
-    if (pathname.includes('seller')) {
+    if (pathname.includes('real-estate-seller-leads')) {
       return {
         title: "Our Proven Process",
         subtitle: "From lead identification to listing conversion - our systematic approach delivers results",
@@ -72,7 +72,7 @@ export default function Process() {
       };
     }
 
-    if (pathname.includes('broker')) {
+    if (pathname.includes('real-estate-broker-leads')) {
       return {
         title: "Our Proven Process",
         subtitle: "Strategic broker identification and partnership development for your business growth",
@@ -105,7 +105,7 @@ export default function Process() {
       };
     }
 
-    if (pathname.includes('appointment')) {
+    if (pathname.includes('real-estate-appointment-setting')) {
       return {
         title: "Our Proven Process",
         subtitle: "From prospect identification to confirmed meetings - streamlining your sales pipeline",

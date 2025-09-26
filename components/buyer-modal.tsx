@@ -274,9 +274,11 @@ export function BuyerModal({ isOpen, onClose }: BuyerModalProps) {
             />
             <label htmlFor="termsAgree" className="text-gray-700">
               I agree to{" "}
-              <a href="#terms" className="text-blue-600 underline">
+              <a href="#terms-conditions" className="text-blue-600 underline">
                 Terms and Conditions
-              </a>
+              </a>{" "} and{" "} <a href="#privacy-policy" className="text-blue-600 hover:underline">
+                      Privacy Policy
+                    </a> I consent to being contacted by Open Projects Dubai regarding my inquiry.*
             </label>
           </div>
 

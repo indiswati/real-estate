@@ -47,7 +47,7 @@ export function ContactForm() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
@@ -192,7 +192,7 @@ export function ContactForm() {
                     Subject
                   </Label>
                   <Select value={formData.subject} onValueChange={(value) => handleInputChange("subject", value)}>
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger id="contact-subject" className="mt-1">
                       <SelectValue placeholder="Select a subject" />
                     </SelectTrigger>
                     <SelectContent>
@@ -234,10 +234,10 @@ export function ContactForm() {
                     checked={formData.agreeToTerms}
                     onChange={(e) => handleInputChange("agreeToTerms", e.target.checked)}
                   />
-                  <label htmlFor="contact-terms" className="text-sm text-gray-600 leading-relaxed">
-                    I agree to the{" "} <a href="/terms-conditions" className="text-blue-600 hover:underline">
+                  <label htmlFor="termsAgree" className="text-sm text-gray-600 leading-relaxed">
+                    I agree to the{" "} <a href="#terms-conditions" className="text-blue-600 hover:underline">
                       Terms & Conditions
-                    </a>{" "} and{" "} <a href="/privacy-policy" className="text-blue-600 hover:underline">
+                    </a>{" "} and{" "} <a href="#privacy-policy" className="text-blue-600 hover:underline">
                       Privacy Policy
                     </a> I consent to being contacted by Open Projects Dubai regarding my inquiry.*</label>
 

@@ -13,19 +13,18 @@ export default function HomePage() {
   return (
     <div className="font-poppins bg-gradient-to-br from-gray-50 to-blue-50">
       <Header />
-      <div id="home">
+     
       <HeroSection />
-      </div>
-      <div id="lead-services">
+      
+      
         <LeadServices />
-      </div>
-      <div id="about">
+      
       <About />
-      </div>
+     
       <Testimonials />
-      <div id="blog">
+      
       <LatestInsights />
-      </div>
+      
       <WhyChooseUs />
       <FAQ />
       <div id="contact">

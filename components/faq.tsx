@@ -49,7 +49,7 @@ export function FAQ() {
 
   // Dynamic FAQ data based on URL
   const getFAQData = () => {
-    if (pathname.includes('seller')) {
+    if (pathname.includes('real-estate-seller-leads')) {
       return {
         title: "Seller Leads - Frequently Asked Questions",
         subtitle: "Got questions about seller leads? We've got answers. Find everything you need to know about our seller lead generation services.",
@@ -87,7 +87,7 @@ export function FAQ() {
       };
     }
 
-    if (pathname.includes('broker')) {
+    if (pathname.includes('real-estate-broker-leads')) {
       return {
         title: "Broker Leads - Frequently Asked Questions",
         subtitle: "Learn about our comprehensive broker lead generation and partnership services.",
@@ -125,7 +125,7 @@ export function FAQ() {
       };
     }
 
-    if (pathname.includes('appointment')) {
+    if (pathname.includes('real-estate-appointment-setting')) {
       return {
         title: "Appointment Setting - Frequently Asked Questions",
         subtitle: "Discover how our appointment setting services can streamline your business meetings and boost your conversion rates.",
@@ -297,12 +297,12 @@ export function FAQ() {
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-answer-${index}`}
               >
-                <h3 
+                <span id={`faq-question-${index}`} 
                   className="text-lg font-semibold pr-4"
                   style={{ color: '#062235' }}
                 >
                   {item.question}
-                </h3>
+                </span>
                 <div className="flex-shrink-0">
                   <div
                     className="w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300"
