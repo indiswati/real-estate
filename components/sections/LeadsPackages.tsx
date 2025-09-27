@@ -135,8 +135,7 @@ export default function LeadsPackages() {
           >
             {/* .pkg h4 - margin:0 0 8px */}
             <h4 
-              className="font-semibold text-[#0f172a]"
-              style={{ margin: '0 0 8px' }}
+              className="font-bold text-indigo-600 text-xl group-hover:text-blue-700 group-hover:scale-105 transition-all duration-300"
             >
               {pkg.title}
             </h4>
