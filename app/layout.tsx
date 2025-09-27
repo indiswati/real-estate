@@ -4,7 +4,6 @@ import { Montserrat, Poppins, Roboto, Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
-import RemoveInvalidMeta from "./removeInvalidMeta"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
