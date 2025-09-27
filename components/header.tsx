@@ -95,7 +95,7 @@ export function Header() {
                 >
                   Lead Services
                 </button>
-                <button
+                <span
                   className="hover:text-blue-600 transition-colors duration-300 cursor-pointer p-1"
                   onClick={handleDropdownArrowClick}
                 >
@@ -113,7 +113,7 @@ export function Header() {
                   >
                     <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
                   </svg>
-                </button>
+                </span>
               </div>
 
               {/* Dropdown Menu */}
@@ -337,7 +337,7 @@ export function Header() {
                 <button
                   className="font-semibold text-gray-800 mb-2 hover:text-blue-600 transition-colors duration-200"
                   onClick={() => {
-                    router.push("/leads")
+                    router.push("/services")
                     closeMobileMenu()
                   }}
                 >
@@ -347,7 +347,7 @@ export function Header() {
                   <button
                     className="w-full text-left p-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200"
                     onClick={() => {
-                      router.push("/leads/buyer")
+                      router.push("/services/real-estate-buyer-leads")
                       closeMobileMenu()
                     }}
                   >
@@ -356,7 +356,7 @@ export function Header() {
                   <button
                     className="w-full text-left p-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200"
                     onClick={() => {
-                      router.push("/leads/seller")
+                     router.push("/services/real-estate-seller-leads")
                       closeMobileMenu()
                     }}
                   >
@@ -365,7 +365,7 @@ export function Header() {
                   <button
                     className="w-full text-left p-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200"
                     onClick={() => {
-                      router.push("/leads/broker")
+                      router.push("/services/real-estate-broker-leads")
                       closeMobileMenu()
                     }}
                   >
@@ -374,7 +374,7 @@ export function Header() {
                   <button
                     className="w-full text-left p-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors duration-200"
                     onClick={() => {
-                      router.push("/leads/appointment")
+                      router.push("/services/real-estate-appointment-setting")
                       closeMobileMenu()
                     }}
                   >
