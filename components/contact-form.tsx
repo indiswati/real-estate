@@ -153,33 +153,43 @@ export function ContactForm() {
                 </div>
 
                 {/* Phone Field with Country Code */}
-                <div>
-                  <Label htmlFor="contact-phone" className="text-sm font-medium text-gray-700">
-                    Phone Number *
-                  </Label>
-                  <div className="flex mt-1">
-                    <select
-                      value={formData.countryCode}
-                      onChange={(e) => handleInputChange("countryCode", e.target.value)}
-                      className="w-32 px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    >
-                      {countryCodes.map((country) => (
-                        <option key={country.code} value={country.code}>
-                          {country.code} ({country.country})
-                        </option>
-                      ))}
-                    </select>
-                    <Input
-                      id="contact-phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange("phone", e.target.value)}
-                      className="ml-2 flex-1"
-                      placeholder="Enter phone number"
-                      required
-                    />
-                  </div>
-                </div>
+              <div>
+  <Label htmlFor="contact-phone" className="text-sm font-medium text-gray-700">
+    Phone Number *
+  </Label>
+  <div className="flex mt-1">
+    <label htmlFor="country-code-select" className="sr-only">
+      Country Code
+    </label>
+    <select
+      id="country-code-select"
+      value={formData.countryCode}
+      onChange={(e) => handleInputChange("countryCode", e.target.value)}
+      className="w-32 px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+      aria-label="Country code"
+      required
+    >
+      {countryCodes.map((country) => (
+        <option key={country.code} value={country.code}>
+          {country.code} ({country.country})
+        </option>
+      ))}
+    </select>
+    <Input
+      id="contact-phone"
+      type="tel"
+      value={formData.phone}
+      onChange={(e) => handleInputChange("phone", e.target.value)}
+      className="ml-2 flex-1"
+      placeholder="Enter phone number"
+      required
+      aria-describedby="phone-description"
+    />
+  </div>
+  <p id="phone-description" className="sr-only">
+    Select your country code and enter your phone number
+  </p>
+</div>
 
                 {/* Subject Field */}
                 <div>
