@@ -168,7 +168,8 @@ export function ContactForm() {
       className="w-32 px-3 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
       aria-label="Country code"
       required
-    >
+    ><option value="">Select a subject</option>
+      <option value="">Select a country code</option>
       {countryCodes.map((country) => (
         <option key={country.code} value={country.code}>
           {country.code} ({country.country})

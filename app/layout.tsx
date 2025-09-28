@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
+      <meta name="next-size-adjust" content="true"/>
       <body
         className={`font-sans ${montserrat.variable} ${poppins.variable} ${roboto.variable} ${openSans.variable} antialiased`}
       >
