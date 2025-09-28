@@ -98,9 +98,9 @@ export function WhyChooseUs() {
               <div className="transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
                 {feature.icon}
               </div>
-              <h4 className="font-bold text-lg text-gray-800 transition-all duration-300 group-hover:text-blue-600 group-hover:scale-105">
+              <span className="font-bold text-lg text-gray-800 transition-all duration-300 group-hover:text-blue-600 group-hover:scale-105">
                 {feature.title}
-              </h4>
+              </span>
             </div>
           ))}
         </div>

@@ -243,7 +243,7 @@ export function About() {
                   {feature.icon}
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-2 group-hover:text-blue-700 transition-colors duration-300">
+                  <h4 className="font-bold text-indigo-600 text-xl group-hover:text-blue-700 group-hover:scale-105 transition-all duration-300">
                     {feature.title}
                   </h4>
                   <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">

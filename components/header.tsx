@@ -405,10 +405,10 @@ export function Header() {
 
               <button
                 className="w-full text-left p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-                onClick={() => {
-                  scrollToElement('contact')
-                  closeMobileMenu()
-                }}
+                onClick={(e) => { e.preventDefault()
+    e.stopPropagation();
+    router.push('contact-us');
+  }}
               >
                 Contact
               </button>

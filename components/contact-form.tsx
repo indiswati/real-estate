@@ -240,13 +240,13 @@ export function ContactForm() {
                     checked={formData.agreeToTerms}
                     onChange={(e) => handleInputChange("agreeToTerms", e.target.checked)}
                   />
-                  <label htmlFor="termsAgree" className="text-sm text-gray-600 leading-relaxed">
+                  <label htmlFor="termsAgree" className="text-sm text-gray leading-relaxed">
                     I agree to the{" "}
-                    <a href="#terms-conditions" className="text-blue-600 hover:underline">
+                    <a href="#terms-conditions" className="text-blue hover:underline">
                       Terms & Conditions
                     </a>{" "}
                     and{" "}
-                    <a href="#privacy-policy" className="text-blue-600 hover:underline">
+                    <a href="#privacy-policy" className="text-blue hover:underline">
                       Privacy Policy
                     </a>
                     . I consent to being contacted by Open Projects Dubai regarding my inquiry.*

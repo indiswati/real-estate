@@ -133,7 +133,7 @@ export function Testimonials() {
               "{testimonial.quote}"
             </p>
             
-            <h4 
+            <span 
               className="font-bold text-indigo-600 text-xl group-hover:text-blue-700 group-hover:scale-105 transition-all duration-300"
               style={{ 
                 opacity: isSectionVisible ? 1 : 0, 
@@ -142,7 +142,7 @@ export function Testimonials() {
               }}
             >
               {testimonial.author}
-            </h4>
+            </span>
           </div>
         ))}
       </div>
